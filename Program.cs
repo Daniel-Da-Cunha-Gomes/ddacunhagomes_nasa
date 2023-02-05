@@ -26,10 +26,7 @@ namespace WindowsFormsApp1
                 string explication = (string)data["explanation"];
                 string imgUrl = (string)data["url"];
 
-                Console.WriteLine("titre: " + titre);
-                Console.WriteLine("Date: " + date);
-                Console.WriteLine("explication: " + explication);
-                Console.WriteLine("Image URL: " + imgUrl);
+                Console.WriteLine("titre: " + titre + "Date: " + date + "explication: " + explication + "Image URL: " + imgUrl);
             }
         }
         /// <summary>
@@ -63,8 +60,10 @@ namespace WindowsFormsApp1
                     string orbitDeterminationDate = (string)asteroidArray[i]["orbital_data"]["orbit_determination_date"].ToString();
                     string observationsUse = (string)asteroidArray[i]["orbital_data"]["observations_used"].ToString();
                     string minimumOrbitIntersection = (string)asteroidArray[i]["orbital_data"]["minimum_orbit_intersection"].ToString();
+                    
                     string ecentricity = (string)asteroidArray[i]["orbital_data"]["eccentricity"].ToString();
                     string semiMajorX = (string)asteroidArray[i]["orbital_data"]["semi_major_axis"].ToString();
+                    
                     string orbitalPeriod = (string)asteroidArray[i]["orbital_data"]["orbital_period"].ToString();
                     string orbitClassRange = (string)asteroidArray[i]["orbital_data"]["orbit_class"]["orbit_class_range"].ToString();
 
