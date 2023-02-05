@@ -38,14 +38,7 @@ namespace WindowsFormsApp1
                 string json = client1.DownloadString(url);
                 JObject data = JObject.Parse(json);
                 string titre = (string)data["title"];
-                string date = (string)data["date"];
-                string explication = (string)data["explanation"];
-                string imgUrl = (string)data["url"];
-
                 Console.WriteLine("titre: " + titre);
-                Console.WriteLine("Date: " + date);
-                Console.WriteLine("explication: " + explication);
-                Console.WriteLine("Image URL: " + imgUrl);
 
                 label2.Text = titre;
             }
@@ -60,16 +53,8 @@ namespace WindowsFormsApp1
             {
                 string json = client1.DownloadString(url);
                 JObject data = JObject.Parse(json);
-                string titre = (string)data["title"];
-                string date = (string)data["date"];
                 string explication = (string)data["explanation"];
-                string imgUrl = (string)data["url"];
-
-                Console.WriteLine("titre: " + titre);
-                Console.WriteLine("Date: " + date);
                 Console.WriteLine("explication: " + explication);
-                Console.WriteLine("Image URL: " + imgUrl);
-
                 label1.Text = explication;
             }
         }
